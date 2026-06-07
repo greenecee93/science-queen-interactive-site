@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ms. Greene the Science Queen | Science Tutoring</title>
+  <meta name="description" content="Personalized science tutoring that turns curiosity into confidence. Middle school through AP and intro college-level support." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --emerald: #1B8E5A;
+      --purple: #6A35A1;
+      --mint: #E8F7F1;
+      --charcoal: #1E1E1E;
+      --ink: #2E2E2E;
+      --light: #FFFFFF;
+      --gray: #F5F5F7;
+      --accent: #FFD452;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); background: var(--light); line-height: 1.6; }
+
+    .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+    header { position: sticky; top:0; background: rgba(255,255,255,0.92); backdrop-filter: saturate(180%) blur(8px); border-bottom: 1px solid #eee; z-index: 50; }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding: 14px 0; }
+    .brand { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .crown { width:36px; height:36px; border-radius:8px; background: linear-gradient(135deg, var(--emerald), var(--purple)); display:flex; align-items:center; justify-content:center; color:white; font-weight:800; font-family:Poppins; }
+    .brand h1 { font-family:Poppins, sans-serif; font-weight:800; font-size:18px; margin:0; color: var(--charcoal); }
+    nav a { color: var(--charcoal); text-decoration:none; padding:10px 12px; border-radius:8px; font-weight:600; }
+    nav a:hover { background: var(--gray); }
+    .cta { background: var(--emerald); color: white; }
+    .cta:hover { background: #157349; }
+
+    .hero { background: linear-gradient(180deg, var(--mint), #ffffff); border-bottom:1px solid #eee; }
+    .hero-inner { display:grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items:center; padding: 56px 0; }
+    .hero h2 { font-family:Poppins; font-size:42px; line-height:1.2; margin:0 0 12px; color: var(--charcoal); }
+    .hero p { font-size:18px; margin:0 0 20px; }
+    .hero .badge { display:inline-flex; align-items:center; gap:8px; background: var(--accent); color: #3a2a00; padding:8px 12px; border-radius:999px; font-weight:700; }
+    .hero .card { background:white; border:1px solid #eee; border-radius:16px; padding:18px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    .hero .list { display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:12px; }
+    .chip { background: var(--gray); padding:8px 12px; border-radius:999px; font-weight:600; }
+
+    section { padding: 56px 0; }
+    h3 { font-family:Poppins; font-size:28px; margin:0 0 12px; color: var(--charcoal); }
+    .sub { color:#666; margin-bottom:24px; }
+
+    .cards { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+    .card { background:white; border:1px solid #eee; border-radius:16px; padding:18px; }
+    .card h4 { font-family:Poppins; margin:0 0 8px; font-size:18px; }
+    .card .meta { color:#666; font-size:14px; }
+
+    .price { font-weight:800; color: var(--purple); font-size:22px; }
+    .option { display:flex; flex-direction:column; gap:8px; }
+
+    .quote { font-style:italic; color:#333; }
+    .avatar { width:40px; height:40px; border-radius:999px; background: var(--mint); display:inline-block; margin-right:10px; border: 1px solid #ddd; }
+
+    .form { background:white; border:1px solid #eee; border-radius:16px; padding:20px; }
+    label { display:block; font-weight:600; margin:12px 0 6px; }
+    input, select, textarea { width:100%; padding:12px; border:1px solid #ddd; border-radius:10px; font:inherit; }
+    textarea { min-height:110px; }
+    .inline { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+    .btn { display:inline-block; border:none; background: var(--emerald); color:white; padding:12px 16px; border-radius:10px; font-weight:700; cursor:pointer; }
+    .btn:hover { background:#157349; }
+    .note { font-size:13px; color:#666; margin-top:8px; }
+
+    details { background:white; border:1px solid #eee; border-radius:12px; padding:12px 16px; margin-bottom:12px; }
+    summary { cursor:pointer; font-weight:700; }
+
+    footer { background: var(--charcoal); color:#ddd; }
+    footer a { color:#fff; text-decoration: none; }
+    .footer-grid { display:grid; grid-template-columns: 2fr 1fr; gap:24px; padding: 24px 0; }
+    .small { font-size:13px; color:#aaa; }
+
+    @media (max-width: 880px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .inline { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#top">
+        <div class="crown">Q</div>
+        <h1>Ms. Greene the Science Queen</h1>
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#subjects">Subjects</a>
+        <a href="#options">Tutoring</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#booking" class="cta">Book a session</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="badge">Charlotte • Online & In‑Person</div>
+        <h2>Turning curiosity into confidence—one experiment at a time.</h2>
+        <p>I help middle school, high school, and intro college students master science with clear explanations, compassionate coaching, and structured practice.</p>
+        <div class="list">
+          <div class="chip">Biology • Chemistry • Physics</div>
+          <div class="chip">Honors • AP • STEM prep</div>
+        </div>
+        <p class="note">Flexible scheduling, tailored plans, and progress updates for families.</p>
+        <a href="#booking" class="btn">Book a session</a>
+      </div>
+      <div class="card">
+        <h4>Fast facts</h4>
+        <ul>
+          <li><strong>Experience:</strong> 8+ years teaching & tutoring</li>
+          <li><strong>Style:</strong> Concept-first, problem-based, test-smart</li>
+          <li><strong>Students:</strong> Grades 6–12, AP, intro college</li>
+          <li><strong>Format:</strong> Zoom or Charlotte-area in-person</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <section id="about">
+    <div class="container">
+      <h3>About Ms. Greene</h3>
+      <p class="sub">Science is more than memorizing facts—it’s learning how to think. I meet students where they are, build strong foundations, and connect ideas so they stick.</p>
+      <div class="cards">
+        <div class="card">
+          <h4>Teaching philosophy</h4>
+          <p>I use everyday analogies, guided inquiry, and scaffolded problem sets. Students learn to explain concepts in their own words, then apply them in increasingly complex scenarios.</p>
+        </div>
+        <div class="card">
+          <h4>Results you can expect</h4>
+          <p>Improved test scores, less anxiety, and stronger study habits. I share short feedback notes after sessions so families see progress and next steps.</p>
+        </div>
+        <div class="card">
+          <h4>What makes this different</h4>
+          <p>Blending conceptual clarity with strategic test skills—so students don’t just know the “what,” they master the “why” and the “how.”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="subjects">
+    <div class="container">
+      <h3>Subjects and levels</h3>
+      <p class="sub">Core science courses plus enrichment and exam support.</p>
+      <div class="cards">
+        <div class="card">
+          <h4>Biology</h4>
+          <p>Cells, genetics, evolution, ecology, physiology, lab skills.</p>
+          <p class="meta">Middle school • Honors • AP Biology • Intro college</p>
+        </div>
+        <div class="card">
+          <h4>Chemistry</h4>
+          <p>Stoichiometry, thermochemistry, bonding, kinetics, equilibrium, lab safety.</p>
+          <p class="meta">General • Honors • AP Chemistry • Intro college</p>
+        </div>
+        <div class="card">
+          <h4>Physics</h4>
+          <p>Mechanics, energy, waves, electricity & magnetism, problem strategies.</p>
+          <p class="meta">Conceptual • Honors • AP Physics 1 • Intro college</p>
+        </div>
+        <div class="card">
+          <h4>Exam prep</h4>
+          <p>Unit reviews, practice tests, error analysis, time management, lab write‑ups.</p>
+          <p class="meta">AP • End‑of‑Course • Midterms • Finals</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="options">
+    <div class="container">
+      <h3>Tutoring options</h3>
+      <p class="sub">Choose what fits your schedule and goals. Ask about bundles and sibling discounts.</p>
+      <div class="cards">
+        <div class="card option">
+          <h4>1:1 Session (60 min)</h4>
+          <p>Personalized coaching, concept review, and targeted practice.</p>
+          <p class="price">$75 per session</p>
+        </div>
+        <div class="card option">
+          <h4>Weekly Coaching</h4>
+          <p>One session per week, progress tracking, priority scheduling.</p>
+          <p class="price">$270 per month</p>
+        </div>
+        <div class="card option">
+          <h4>Exam Sprint (4 sessions)</h4>
+          <p>Focused review plan with practice exams and feedback.</p>
+          <p class="price">$280 package</p>
+        </div>
+        <div class="card option">
+          <h4>Small Group (2–4 students)</h4>
+          <p>Collaborative learning at a lower per-student rate.</p>
+          <p class="price">$45 per student</p>
+        </div>
+      </div>
+      <p class="note">In‑person: Charlotte area. Online: Zoom with shared whiteboard and materials.</p>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <div class="container">
+      <h3>Parent and student reviews</h3>
+      <div class="cards">
+        <div class="card">
+          <span class="avatar"></span>
+          <p class="quote">“My daughter went from overwhelmed to confident. Ms. Greene breaks tough topics into steps that finally make sense.”</p>
+          <p class="meta">— Parent of 10th grader</p>
+        </div>
+        <div class="card">
+          <span class="avatar"></span>
+          <p class="quote">“AP Bio labs used to stress me out. The practice write‑ups and feedback were game‑changers.”</p>
+          <p class="meta">— 11th grade student</p>
+        </div>
+        <div class="card">
+          <span class="avatar"></span>
+          <p class="quote">“Clear, patient, and organized. My son learned how to study—not just cram.”</p>
+          <p class="meta">— Parent of 9th grader</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="container">
+      <h3>Book a session</h3>
+      <p class="sub">Tell me about your goals and schedule. I’ll reply within 24 hours.</p>
+      <form class="form" id="bookingForm">
+        <div class="inline">
+          <div>
+            <label for="name">Student name</label>
+            <input id="name" name="name" type="text" placeholder="e.g., Jordan Greene" required />
+          </div>
+          <div>
+            <label for="email">Parent or student email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+        </div>
+
+        <div class="inline">
+          <div>
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Choose a subject</option>
+              <option>Biology</option>
+              <option>Chemistry</option>
+              <option>Physics</option>
+              <option>Exam Prep</option>
+            </select>
+          </div>
+          <div>
+            <label for="level">Level</label>
+            <select id="level" name="level" required>
+              <option value="">Choose a level</option>
+              <option>Middle School</option>
+              <option>High School</option>
+              <option>AP</option>
+              <option>Intro College</option>
+            </select>
+          </div>
+        </div>
+
+        <label for="goals">Goals or topics</label>
+        <textarea id="goals" name="goals" placeholder="Tell me what you’re working on..."></textarea>
+
+        <div class="inline">
+          <div>
+            <label for="format">Format</label>
+            <select id="format" name="format" required>
+              <option value="">Choose a format</option>
+              <option>Online (Zoom)</option>
+              <option>In‑person (Charlotte)</option>
+            </select>
+          </div>
+          <div>
+            <label for="times">Preferred times</label>
+            <input id="times" name="times" type="text" placeholder="e.g., Tue/Thu 4–6 PM" />
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Request booking</button>
+        <p class="note">You’ll receive a confirmation email with next steps.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h3>FAQs</h3>
+      <details>
+        <summary>What happens in a first session?</summary>
+        <p>We set goals, review a recent assignment or test, identify gaps, and build a plan. Students leave with a short practice task.</p>
+      </details>
+      <details>
+        <summary>Do you provide materials?</summary>
+        <p>Yes—guided notes, practice sets, and lab report templates tailored to your course.</p>
+      </details>
+      <details>
+        <summary>Cancellation policy</summary>
+        <p>Reschedule up to 24 hours in advance at no charge. Same‑day cancellations billed at 50%.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h4 style="font-family:Poppins;margin:0 0 8px;">Ms. Greene the Science Queen</h4>
+        <p>Charlotte, NC • Online & In‑Person</p>
+        <p class="small">© <span id="year"></span> Ms. Greene. All rights reserved.</p>
+      </div>
+      <div>
+        <p
